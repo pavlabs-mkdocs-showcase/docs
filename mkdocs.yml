@@ -8,10 +8,13 @@ markdown_extensions:
 
 # a list of mkdocs plugins: https://github.com/mkdocs/mkdocs/wiki/MkDocs-Plugins#site-management
 plugins:
+  # https://github.com/mkdocs/mkdocs/wiki/MkDocs-Plugins#mkdocs-multirepo-plugin
   - multirepo: # https://github.com/jdoiro3/mkdocs-multirepo-plugin - bring multiple repos into one doc site
       cleanup: true
       repos:
         - section: Backend
-          import_url: 'https://github.com/pavlabs-mkdocs-showcase/backend-service'
-        - section: Backend
-          import_url: 'https://github.com/pavlabs-mkdocs-showcase/frontend-service'
+          import_url: 'https://github.com/pavlabs-mkdocs-showcase/backend-service?branch=main'
+        - section: Frontend
+          import_url: 'https://github.com/pavlabs-mkdocs-showcase/frontend-service?branch=main'
+  # https://github.com/mkdocs/mkdocs/wiki/MkDocs-Plugins#kroki
+#  - kroki: # https://github.com/AVATEAM-IT-SYSTEMHAUS/mkdocs-kroki-plugin - unified api for all diagram types
